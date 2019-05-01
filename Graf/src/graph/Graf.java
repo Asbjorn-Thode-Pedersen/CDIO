@@ -1,6 +1,5 @@
 package graph;
 
-
 public class Graf {
 
     public int[][] coordinates = new int[2][15]; // 0: Robot 1-10: Balls 12-15: obstacles
