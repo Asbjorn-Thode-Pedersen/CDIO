@@ -1,12 +1,13 @@
 package graph;
 
+
 public class Graf {
 
-    public int[][] coordinates = new int[2][15]; // 0: Robot 1-10: Balls 12-15: obstacles
+    public double[][] coordinates = new double[2][15]; // 0: Robot 1-10: Balls 12-15: obstacles
     private double[][] graph = new double[11][11];
     public int[] path = { 99, 99, 99, 99, 99, 99, 99, 99, 99, 99 }; // new int[10];
 
-    public void loadCoordinates(int[][] coordinates) {
+    public void loadCoordinates(double[][] coordinates) {
         this.coordinates = coordinates;
     }
 
@@ -21,7 +22,7 @@ public class Graf {
         }
     }
 
-    private double calcDistance(int x1, int y1, int x2, int y2) {
+    private double calcDistance(double x1, double y1, double x2, double y2) {
         double tempValue = Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2)); // Distance formlen
         return tempValue;
     }
