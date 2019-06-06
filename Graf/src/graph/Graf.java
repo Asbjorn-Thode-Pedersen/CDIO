@@ -5,7 +5,7 @@ public class Graf {
 
     public double[][] coordinates = new double[2][15]; // 0: Robot 1-10: Balls 12-15: obstacles
     private double[][] graph = new double[11][11];
-    public int[] path = { 99, 99, 99, 99, 99, 99, 99, 99, 99, 99 }; // new int[10];
+    public int[] path = {0, 99, 99, 99, 99, 99, 99, 99, 99, 99, 99 }; // new int[10];
 
     public void loadCoordinates(double[][] coordinates) {
         this.coordinates = coordinates;
@@ -40,10 +40,11 @@ public class Graf {
         return closestNode;
     }
 
-    public void findClosestAll() { // Run this function
+    public void findClosestAll(int[] path) { // Run this function
         int node = 0;
-        for (int i = 0; i < 11; i++) {
+        for (int i = 0; i < 10; i++) {
             node = findClosestNext(node);
+            path[i+1] = node;
         }
 
     }
