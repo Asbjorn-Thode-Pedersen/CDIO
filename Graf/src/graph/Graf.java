@@ -2,6 +2,7 @@ package graph;
 
 
 public class Graf {
+	
 
     public double[][] coordinates = new double[2][15]; // 0: Robot 1-10: Balls 12-15: obstacles
     private double[][] graph = new double[11][11];
@@ -57,6 +58,7 @@ public class Graf {
             if (!isInPath(i)) {
                 if (crosses(node, i)) {
                     // Do stuff
+                	
                 }
                 if (graph[node][i] < length) {
                     closestNode = i;

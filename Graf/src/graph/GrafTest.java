@@ -4,8 +4,9 @@ public class GrafTest extends Graf {
 
     public static void main(String args[]) {   
         GrafTest graph = new GrafTest();
-        double[][] coordins = { { 1.21, 2.2, 3, 1.1, 5, 6, 7, 8, 1.3, 1.2, 8.7, 4.1, 4.3, 3.7, 5.9, 6.8 },
-                { 1, 3, 5, 1.2, 4, 5.3, 6, 8, 6.8, 2.3, 1.9, 2.2, 4.8, 3.8, 5.5, 5.2 }, };
+        double[][] coordins = { 
+        		{ 1, 2.2, 3, 5.1, 5, 6, 7, 8, 1.3, 13, 1.05, 4.1, 4.3, 4.3, 3.8, 4.8 },
+                { 1, 7, 5, 1.2, 4, 5.3, 6, 8, 6.8, 1.1, 1.05, 2.2, 4.8, 3.8, 4.3, 4.3 }, };
 
         graph.loadCoordinates(coordins);
         graph.createGraph();
